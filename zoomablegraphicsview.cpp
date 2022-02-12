@@ -82,7 +82,7 @@ void ZoomableGraphicsView::resizeEvent(QResizeEvent *e)
 #ifndef QT_NO_WHEELEVENT
 void ZoomableGraphicsView::wheelEvent(QWheelEvent *e)
 {
-    if (e->modifiers() & Qt::ControlModifier)
+    if (e->modifiers() & (Qt::ControlModifier | Qt::ShiftModifier))
     {
         /**
          * Warning: Combining numerous successive zoom In and Out can yield to
